@@ -1,0 +1,80 @@
+{
+  "name": "basic-react-app-mobx",
+  "version": "0.1.0",
+  "description": "Basic app for learning React, Mobx, Webpack (with Hot Module Replacement), Typescript and Babel.",
+  "keywords": [
+    "react",
+    "webpack",
+    "typescript",
+    "mobx",
+    "babel",
+    "sass",
+    "hmr",
+    "starter"
+  ],
+  "author": "Vu Duong",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vudh/basic-react-app-mobx.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vudh/basic-react-app-mobx/issues"
+  },
+  "homepage": "https://github.com/vudh/basic-react-app-mobx",
+  "scripts": {
+    "build": "yarn run clean-dist && webpack --config=configs/webpack/prod.js",
+    "clean-dist": "rimraf dist/*",
+    "lint": "eslint './src/**/*.{js,ts,tsx}' --quiet",
+    "start": "yarn run start-dev",
+    "start-dev": "webpack serve --config=configs/webpack/dev.js",
+    "start-prod": "yarn run build && node express.js",
+    "test": "jest --coverage --watchAll --config=configs/jest.json"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.5",
+    "@babel/core": "^7.14.6",
+    "@babel/plugin-transform-runtime": "^7.14.5",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-react": "^7.14.5",
+    "@babel/preset-typescript": "^7.14.5",
+    "@types/jest": "^26.0.24",
+    "@types/node": "^16.3.1",
+    "@types/react": "^17.0.14",
+    "@types/react-dom": "^17.0.9",
+    "@typescript-eslint/eslint-plugin": "^4.28.2",
+    "@typescript-eslint/parser": "^4.28.2",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.2.6",
+    "eslint": "^7.30.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.24.0",
+    "express": "^4.17.1",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.2",
+    "image-webpack-loader": "^7.0.1",
+    "jest": "^27.0.6",
+    "node-sass": "^6.0.1",
+    "prettier": "^2.3.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-hot-loader": "^4.13.0",
+    "rimraf": "^3.0.2",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.0.0",
+    "typescript": "^4.3.5",
+    "webpack": "^5.44.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "@babel/plugin-proposal-decorators": "^7.14.5",
+    "@babel/runtime": "^7.14.8",
+    "mobx": "^6.3.2",
+    "mobx-react": "^7.2.0",
+    "mobx-state-tree": "^5.0.2",
+    "react-router-dom": "^5.2.0"
+  }
+}
